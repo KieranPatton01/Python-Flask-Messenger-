@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Sign Up</title>
+</head>
+
+<body>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <!-- Do something with the message -->
+            {{ message }}
+
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% if error %}
+        <p>{{ error }}</p>
+{% endif %}
+
+<form name="reg_form" method="POST">
+	
+	<input type="text" required="required" minlength="2" maxlength="12"  placeholder="Nickname" name="nickname">
+	<input type="email" required="required" minlength="2" minlength="12"  placeholder="Email" name="email">
+	<input type="password" required="required" minlength="2" minlength="12" placeholder="Password" name="password">
+	<input type="password" required="required" minlength="2" minlength="12"  placeholder="Confirm Password" name="conPassword">
+	<button type="submit" class="btn" name="button" value="Register">
+		Register
+	</button>
+
+</body>
+</html>

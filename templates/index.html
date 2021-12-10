@@ -1,1 +1,13 @@
-home page
+<html>
+<head>
+	<title>Home page</title>
+
+	<link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel = "stylesheet" />
+</head>
+<body>
+	<h1>home page</h1>
+	<h2>sub</h2>
+
+	{% block content %} {% endblock %}
+</body>
+</html>
